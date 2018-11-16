@@ -32,10 +32,15 @@ namespace Sistema_RH.Formulários
                 TelaPrincipal telaprincipal = new TelaPrincipal();
                 telaprincipal.ShowDialog();
             }
-            //falta chamar o form login várias e várias vezes se a senha estiver errada, o que não está acontecendo no momento - comment by inacio
+            //
             else
             {
                 MessageBox.Show("login ou senha estão errados.");
+                txtUser.Text = "";
+                txtPwd.Text = "";
+                this.Visible = true;
+                txtUser.Focus();
+                
             }
             
         }
@@ -44,6 +49,7 @@ namespace Sistema_RH.Formulários
         {
             DialogResult dialogresult = MessageBox.Show("Deseja fechar?", "Confirmar operação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             Close();
+            Application.Exit();
         }
 
         private void TelaLogin_Load(object sender, EventArgs e)
