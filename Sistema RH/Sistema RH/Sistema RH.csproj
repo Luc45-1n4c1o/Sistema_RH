@@ -68,6 +68,7 @@
     <Compile Include="FORMULARIOS\Folha.Designer.cs">
       <DependentUpon>Folha.cs</DependentUpon>
     </Compile>
+    <Compile Include="NEGOCIOS\Autenticacao.cs" />
     <Compile Include="NEGOCIOS\FolhadePagamento.cs" />
     <Compile Include="FORMULARIOS\TelaDeApresentacao.cs">
       <SubType>Form</SubType>

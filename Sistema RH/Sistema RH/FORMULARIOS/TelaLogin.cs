@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_RH.NEGOCIOS;
 
 namespace Sistema_RH.Formulários
 {
@@ -23,11 +24,18 @@ namespace Sistema_RH.Formulários
             
             usuario = txtUser.Text;
             senha = txtPwd.Text;
+            Autenticacao.login(usuario, senha);
+            
             this.Visible = false;
-            if (usuario == "lucas" && senha == "dudu")
+            if (Autenticacao.situacao() == true)
             {
                 TelaPrincipal telaprincipal = new TelaPrincipal();
                 telaprincipal.ShowDialog();
+            }
+            //falta chamar o form login várias e várias vezes se a senha estiver errada, o que não está acontecendo no momento - comment by inacio
+            else
+            {
+                MessageBox.Show("login ou senha estão errados.");
             }
             
         }
