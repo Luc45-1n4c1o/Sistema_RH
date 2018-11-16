@@ -22,7 +22,7 @@ namespace Sistema_RH.DADOS
         {
             if (conn == null)
             {
-                conn = new MySqlConnection("Server=localhost;Database=sistema_rh;Uid=lucas;Pwd=jxM5lYPvsTSbJz96");
+                conn = new MySqlConnection("Server=localhost;Database=sistema_rh;Uid=lucas;Pwd=12345");
             }
 
             return conn;

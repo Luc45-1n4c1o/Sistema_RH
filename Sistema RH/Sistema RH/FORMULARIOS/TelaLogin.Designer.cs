@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
             this.btnLogar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -55,19 +55,20 @@
             this.lblSenha.TabIndex = 1;
             this.lblSenha.Text = "Senha";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(164, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtUser.Location = new System.Drawing.Point(164, 219);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(150, 20);
+            this.txtUser.TabIndex = 2;
             // 
-            // textBox2
+            // txtPwd
             // 
-            this.textBox2.Location = new System.Drawing.Point(164, 268);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtPwd.Location = new System.Drawing.Point(164, 268);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
+            this.txtPwd.Size = new System.Drawing.Size(150, 20);
+            this.txtPwd.TabIndex = 3;
             // 
             // btnLogar
             // 
@@ -104,8 +105,8 @@
             this.ClientSize = new System.Drawing.Size(405, 376);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPwd);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblUsuario);
             this.DoubleBuffered = true;
@@ -123,8 +124,8 @@
 
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Button btnSair;
     }

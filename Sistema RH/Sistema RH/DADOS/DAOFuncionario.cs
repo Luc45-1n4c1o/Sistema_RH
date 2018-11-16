@@ -2,8 +2,6 @@
 using Sistema_RH.NEGOCIOS;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +10,10 @@ namespace Sistema_RH.DADOS
 {
     class DAOFuncionario
     {
-        
-       
-    public static void InsertBD()
+        private static string login;
+        private static string senha;
+
+        public static void InsertBD()
         {
             using (MySqlConnection connecta = DAOConexao.getConnection())
             try
@@ -54,6 +53,45 @@ namespace Sistema_RH.DADOS
                connecta.Close();
             }
         }
+
+        public void LoginSistema(string prmLogin, string prmSenha)
+        {
+            login = prmLogin;
+            senha = prmSenha;
+            
+        }     
+        public static void ConsultarUsuario()
+        {
+            using (MySqlConnection connectaInBD = DAOConexao.getConnection())
+            try
+            {
+                string Usuario = login;
+                string Senha = senha;
+
+
+                    string ComandoSQL = "SELECT * FROM autentificacao WHERE usuario = '" + Usuario + "' and senha = '" + Senha + "'";
+                
+
+                    System.Windows.Forms.MessageBox.Show(ComandoSQL);
+
+                connectaInBD.Open();
+                MySqlCommand inserttDados = new MySqlCommand(ComandoSQL, connectaInBD);
+                inserttDados.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+               connectaInBD.Close();
+            }
+        }
+
+         
+         
 
     }
 }

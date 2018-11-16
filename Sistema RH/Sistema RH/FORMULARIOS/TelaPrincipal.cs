@@ -37,5 +37,10 @@ namespace Sistema_RH.Formulários
             ConsultarRegistro consulta = new ConsultarRegistro();
             consulta.ShowDialog();
         }
+
+        private void Sair(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

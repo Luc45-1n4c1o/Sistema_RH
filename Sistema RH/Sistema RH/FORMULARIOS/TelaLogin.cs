@@ -16,12 +16,20 @@ namespace Sistema_RH.Formulários
         {
             InitializeComponent();
         }
-
+        public string usuario;
+        public string senha;
         private void btnLogar_Click(object sender, EventArgs e)
         {
+            
+            usuario = txtUser.Text;
+            senha = txtPwd.Text;
             this.Visible = false;
-            TelaPrincipal telaprincipal = new TelaPrincipal();
-            telaprincipal.ShowDialog();
+            if (usuario == "lucas" && senha == "dudu")
+            {
+                TelaPrincipal telaprincipal = new TelaPrincipal();
+                telaprincipal.ShowDialog();
+            }
+            
         }
 
         private void btnSair_Click(object sender, EventArgs e)

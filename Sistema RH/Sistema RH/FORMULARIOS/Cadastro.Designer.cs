@@ -307,7 +307,7 @@
             // mskRG
             // 
             this.mskRG.Location = new System.Drawing.Point(482, 131);
-            this.mskRG.Mask = "0.000.000-00";
+            this.mskRG.Mask = "0.000.000-AA";
             this.mskRG.Name = "mskRG";
             this.mskRG.Size = new System.Drawing.Size(76, 20);
             this.mskRG.TabIndex = 38;

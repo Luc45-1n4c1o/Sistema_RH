@@ -22,7 +22,7 @@ namespace Sistema_RH
         {
             try
             {
-                progressBar1.Value = progressBar1.Value + 1; // barra de progesso incrementando de 1 em 1
+                progressBar1.Value = progressBar1.Value + 2; // barra de progesso incrementando de 1 em 1
             }
             catch
             {
