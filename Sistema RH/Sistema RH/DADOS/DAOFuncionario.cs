@@ -34,7 +34,7 @@ namespace Sistema_RH.DADOS
 
                 string InsComand = "INSERT INTO funcionarios (nome , sexo, endereco, departamento, funcao, estado_civil, email, dt_admissao, dt_nasc, cpf, rg, carteira_trab, telefone)" +
                         " VALUES ('" + Nome + "','" + Sexo + "','" + Endereco + "','" + Depto + "','" + Funcao + "', '" + EstCivil + "', '" + Email + 
-                        "', '" + Admissao + "','" + Dt_Nasc + "','" + CPF + "','" + RG + "','" + CarteiraTrab + "','" + Tel + "')";
+                        "', '" + Admissao.ToString("yyyy-MM-dd") + "','" + Dt_Nasc.ToString("yyyy-MM-dd") + "','" + CPF + "','" + RG + "','" + CarteiraTrab + "','" + Tel + "')";
 
                     System.Windows.Forms.MessageBox.Show(InsComand);
 
@@ -53,45 +53,7 @@ namespace Sistema_RH.DADOS
                connecta.Close();
             }
         }
-
-        public void LoginSistema(string prmLogin, string prmSenha)
-        {
-            login = prmLogin;
-            senha = prmSenha;
-            
-        }     
-        public static void ConsultarUsuario()
-        {
-            using (MySqlConnection connectaInBD = DAOConexao.getConnection())
-            try
-            {
-                string Usuario = login;
-                string Senha = senha;
-
-
-                    string ComandoSQL = "SELECT * FROM autentificacao WHERE usuario = '" + Usuario + "' and senha = '" + Senha + "'";
-                
-
-                    System.Windows.Forms.MessageBox.Show(ComandoSQL);
-
-                connectaInBD.Open();
-                MySqlCommand inserttDados = new MySqlCommand(ComandoSQL, connectaInBD);
-                inserttDados.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-            finally
-            {
-               connectaInBD.Close();
-            }
-        }
-
-         
-         
+               
 
     }
 }
