@@ -35,7 +35,7 @@ namespace Sistema_RH.NEGOCIOS
                     MySqlCommand inserttDados = new MySqlCommand(ComandoSQL, connectaInBD);
                     MySqlDataReader dr = inserttDados.ExecuteReader();
 
-                    if (dr.HasRows)
+                    if (dr.HasRows)//se tem linha significa que os dados corresponde e retornei o status como true na funçao situacao mais abaixo
                     {
                         Status = true;
                     }
