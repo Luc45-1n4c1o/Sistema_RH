@@ -24,6 +24,10 @@ namespace Sistema_RH.Formulários
             
             usuario = txtUser.Text;
             senha = txtPwd.Text;
+            if(senha.Length < 4 || senha.Length > 16)
+            {
+                MessageBox.Show("A senha não pode ser menor do que 4 caracteres\n e nem maior do que 16.");
+            }
             Autenticacao.login(usuario, senha);//estou chamando esse método e passando o usuario e senha como paramentro
             
             this.Visible = false;
