@@ -24,7 +24,7 @@ namespace Sistema_RH.Formulários
             
             usuario = txtUser.Text;
             senha = txtPwd.Text;
-            Autenticacao.login(usuario, senha);//estou chamando essa funçao e passando o usuario e senha como paramentro
+            Autenticacao.login(usuario, senha);//estou chamando esse método e passando o usuario e senha como paramentro
             
             this.Visible = false;
             if (Autenticacao.situacao() == true)
@@ -32,7 +32,7 @@ namespace Sistema_RH.Formulários
                 TelaPrincipal telaprincipal = new TelaPrincipal();
                 telaprincipal.ShowDialog();
             }
-            //
+            //mostra o form de login caso os dados inseridos não seja compatíveis com os do banco de dados
             else
             {
                 MessageBox.Show("login ou senha estão errados.");

@@ -39,12 +39,7 @@ namespace Sistema_RH.NEGOCIOS
                     {
                         Status = true;
                     }
-                    /*
-                    else
-                    {
-                        Status = false;
-                    }
-                    */
+                    
                 }
                 catch (Exception ex)
                 {

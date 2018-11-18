@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DADOS\DAOConexao.cs" />
+    <Compile Include="DADOS\DAOFolhadePagamento.cs" />
     <Compile Include="DADOS\DAOFuncionario.cs" />
     <Compile Include="FORMULARIOS\ConsultarRegistro.cs">
       <SubType>Form</SubType>
@@ -141,6 +142,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Sistema_RH\NEGOCIOS\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

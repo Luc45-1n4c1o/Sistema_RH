@@ -31,7 +31,8 @@ namespace Sistema_RH.DADOS
                 string RG = NEGOCIOS.Funcionario._funcionario.Rg;
                 string CarteiraTrab = NEGOCIOS.Funcionario._funcionario.CarteiraTrabalho;
                 string Endereco = NEGOCIOS.Funcionario._funcionario.Endereco;
-
+                
+                //string que encapsula os comandos SQL a serem executados
                 string InsComand = "INSERT INTO funcionarios (nome , sexo, endereco, departamento, funcao, estado_civil, email, dt_admissao, dt_nasc, cpf, rg, carteira_trab, telefone)" +
                         " VALUES ('" + Nome + "','" + Sexo + "','" + Endereco + "','" + Depto + "','" + Funcao + "', '" + EstCivil + "', '" + Email + 
                         "', '" + Admissao.ToString("yyyy-MM-dd") + "','" + Dt_Nasc.ToString("yyyy-MM-dd") + "','" + CPF + "','" + RG + "','" + CarteiraTrab + "','" + Tel + "')";
