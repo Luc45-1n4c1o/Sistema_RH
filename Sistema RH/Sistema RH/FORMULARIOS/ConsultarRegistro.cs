@@ -1,4 +1,5 @@
-﻿using Sistema_RH.NEGOCIOS;
+﻿using Sistema_RH.DADOS;
+using Sistema_RH.NEGOCIOS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,9 +22,25 @@ namespace Sistema_RH.FORMULARIOS
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             // Acrecentar os demais códigos
+            string cpf = mskInformeCpf.Text;
             this.Visible = false;
-            Editar editar = new Editar();
-            editar.ShowDialog();
+            DAOConsultarRegistro pesquisaNoRegistro = new DAOConsultarRegistro();
+            pesquisaNoRegistro.RealizarConsultaPorCPF(cpf);
+            
+            if (pesquisaNoRegistro.statusDoCpf() == true)
+            {
+                Editar editar = new Editar();
+                editar.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("CPF não encontrado no registro!");
+                mskInformeCpf.Text = "";
+                this.Visible = true;
+                mskInformeCpf.Focus();
+
+            }
+            
         }
 
         private void btnSair_Click(object sender, EventArgs e)
