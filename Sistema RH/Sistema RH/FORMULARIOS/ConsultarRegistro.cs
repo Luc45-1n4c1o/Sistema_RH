@@ -30,7 +30,9 @@ namespace Sistema_RH.FORMULARIOS
             if (pesquisaNoRegistro.statusDoCpf() == true)
             {
                 Editar editar = new Editar();
+                editar.txtNome2.Text = "lucas";//tentativa de trazer os dados(vindo do banco) referente ao titular do cpf cujo foi realizada a consulta.
                 editar.ShowDialog();
+                
             }
             else
             {

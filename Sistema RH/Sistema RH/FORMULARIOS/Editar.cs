@@ -22,7 +22,7 @@ namespace Sistema_RH.FORMULARIOS
         {
             Close();
         }
-
+        
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             Funcionario funcionario = new Funcionario();

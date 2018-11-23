@@ -10,9 +10,7 @@ namespace Sistema_RH.DADOS
 {
     class DAOFuncionario
     {
-        private static string login;
-        private static string senha;
-
+        
         public static void InsertBD()
         {
             using (MySqlConnection connecta = DAOConexao.getConnection())

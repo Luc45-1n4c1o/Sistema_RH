@@ -23,17 +23,16 @@ namespace Sistema_RH.DADOS
                     decimal SalarioBase = sbase;
                     string Departamento = depart;
                     string Observacoes = obs;
-
+                    
                     string ComandoSQL = "INSERT INTO folhadepagamento (razao_social, cnpj, nome_do_funcionario, salario_base, departamento, observacoes)" +
                         " VALUES ('" + RazaoSocial + "','" + CNPJ + "','" + NomeFuncionario + "','" + SalarioBase + "','" + Departamento + "', '" + Observacoes + "')";
-
-
+                    
                     System.Windows.Forms.MessageBox.Show(ComandoSQL);
 
                     connectaInBD.Open();
                     MySqlCommand inserttDados = new MySqlCommand(ComandoSQL, connectaInBD);
                     inserttDados.ExecuteNonQuery();
-
+                    
                 }
                 catch (Exception ex)
                 {
@@ -43,7 +42,7 @@ namespace Sistema_RH.DADOS
                 finally
                 {
                     connectaInBD.Close();
-                }
+                } 
         }
 
     }

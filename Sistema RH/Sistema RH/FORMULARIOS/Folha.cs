@@ -25,7 +25,7 @@ namespace Sistema_RH.FORMULARIOS
             payment.Razaosocial = txtRazaoSocial.Text;
             payment.Cnpj = mskCnpj.Text;
             payment.Nomefuncionario = txtFuncionario.Text;
-            payment.Salariobase = Convert.ToDecimal(txtSalarioBase.Text);
+            payment.Salariobase = Convert.ToDecimal(txtSalarioBase.Text.Replace(',','.')); //método replace, tipo_de_conversão(txt_valor.Text.Replace(',','.'));
             payment.Departamento = txtDepartamento.Text;
             payment.Observacoes = txtObservacoes.Text;
 

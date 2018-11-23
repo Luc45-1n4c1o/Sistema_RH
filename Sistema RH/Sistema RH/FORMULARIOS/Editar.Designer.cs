@@ -377,12 +377,12 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label lblNome2;
-        private System.Windows.Forms.TextBox txtNome2;
         private System.Windows.Forms.TextBox txtSexo2;
         private System.Windows.Forms.TextBox txtEndereço2;
         private System.Windows.Forms.TextBox txtDepartamento2;
         private System.Windows.Forms.TextBox txtFunção2;
         private System.Windows.Forms.TextBox txtEstadoCivil2;
         private System.Windows.Forms.TextBox txtEmail2;
+        public System.Windows.Forms.TextBox txtNome2;
     }
 }
