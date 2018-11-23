@@ -251,6 +251,7 @@
             this.btnExcluir.TabIndex = 69;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblNome2
             // 
@@ -360,12 +361,10 @@
         private System.Windows.Forms.Label lblCarteira2;
         private System.Windows.Forms.Label lblRG2;
         private System.Windows.Forms.Label lblEmail2;
-        private System.Windows.Forms.MaskedTextBox mskDataAdmissão2;
         private System.Windows.Forms.Label lblDataAdmissão2;
         private System.Windows.Forms.Label lblEstadoCivil2;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.MaskedTextBox mskTelefone2;
-        private System.Windows.Forms.MaskedTextBox mskDatadeNascimento2;
         private System.Windows.Forms.MaskedTextBox mskCPF2;
         private System.Windows.Forms.Label lblDepartamento2;
         private System.Windows.Forms.Label lblTelefone2;
@@ -377,12 +376,14 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label lblNome2;
-        private System.Windows.Forms.TextBox txtSexo2;
-        private System.Windows.Forms.TextBox txtEndereço2;
-        private System.Windows.Forms.TextBox txtDepartamento2;
-        private System.Windows.Forms.TextBox txtFunção2;
-        private System.Windows.Forms.TextBox txtEstadoCivil2;
-        private System.Windows.Forms.TextBox txtEmail2;
         public System.Windows.Forms.TextBox txtNome2;
+        public System.Windows.Forms.TextBox txtEndereço2;
+        public System.Windows.Forms.TextBox txtFunção2;
+        public System.Windows.Forms.TextBox txtSexo2;
+        public System.Windows.Forms.TextBox txtDepartamento2;
+        public System.Windows.Forms.TextBox txtEstadoCivil2;
+        public System.Windows.Forms.TextBox txtEmail2;
+        public System.Windows.Forms.MaskedTextBox mskDataAdmissão2;
+        public System.Windows.Forms.MaskedTextBox mskDatadeNascimento2;
     }
 }

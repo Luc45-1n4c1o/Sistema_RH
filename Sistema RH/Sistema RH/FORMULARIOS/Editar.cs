@@ -17,11 +17,6 @@ namespace Sistema_RH.FORMULARIOS
         {
             InitializeComponent();
         }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
         
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
@@ -38,6 +33,17 @@ namespace Sistema_RH.FORMULARIOS
             funcionario.Email = txtEmail2.Text;
             funcionario.Rg = mskRG2.Text;
             funcionario.CarteiraTrabalho = mskCarteira2.Text;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogresult = MessageBox.Show("Deseja cancelar a edição dos dados?", "Confirmar operação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Close();
         }
     }
 }

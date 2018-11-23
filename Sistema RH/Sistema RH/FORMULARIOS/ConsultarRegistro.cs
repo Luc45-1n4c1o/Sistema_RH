@@ -29,10 +29,12 @@ namespace Sistema_RH.FORMULARIOS
             
             if (pesquisaNoRegistro.statusDoCpf() == true)
             {
-                Editar editar = new Editar();
-                editar.txtNome2.Text = "lucas";//tentativa de trazer os dados(vindo do banco) referente ao titular do cpf cujo foi realizada a consulta.
-                editar.ShowDialog();
-                
+               // Editar editar = new Editar();
+                DAORetornaCadastro daoteste = new DAORetornaCadastro();
+                daoteste.queryDadosCPF(cpf);
+                //editar.txtNome2.Text = "lucas"; tentativa de trazer os dados(vindo do banco) referente ao titular do cpf cujo foi realizada a consulta.
+                //editar.ShowDialog();
+              
             }
             else
             {
@@ -48,6 +50,11 @@ namespace Sistema_RH.FORMULARIOS
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ConsultarRegistro_Load(object sender, EventArgs e)
+        {
+            this.AcceptButton = btnPesquisar;
         }
     }
 }

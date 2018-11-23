@@ -13,17 +13,21 @@ namespace Sistema_RH.Formulários
 {
     public partial class TelaLogin : Form
     {
+        
         public TelaLogin()
         {
             InitializeComponent();
         }
+
         public string usuario;
         public string senha;
+
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            
+           
             usuario = txtUser.Text;
             senha = txtPwd.Text;
+
             if(senha.Length < 4 || senha.Length > 16)
             {
                 MessageBox.Show("A senha não pode ser menor do que 4 caracteres\n e nem maior do que 16.");
@@ -58,7 +62,7 @@ namespace Sistema_RH.Formulários
 
         private void TelaLogin_Load(object sender, EventArgs e)
         {
-
+            this.AcceptButton = btnLogar;
         }
     }
 }

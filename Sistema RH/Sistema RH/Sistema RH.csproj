@@ -52,6 +52,7 @@
     <Compile Include="DADOS\DAOConsultarRegistro.cs" />
     <Compile Include="DADOS\DAOFolhadePagamento.cs" />
     <Compile Include="DADOS\DAOFuncionario.cs" />
+    <Compile Include="DADOS\DAORetornaCadastro.cs" />
     <Compile Include="FORMULARIOS\ConsultarRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
