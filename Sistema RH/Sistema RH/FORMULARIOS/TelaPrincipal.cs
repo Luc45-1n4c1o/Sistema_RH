@@ -42,5 +42,11 @@ namespace Sistema_RH.Formulários
         {
             Application.Exit();
         }
+
+        private void calcularSalarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalarioLiquido salarioLiquido = new SalarioLiquido();
+            salarioLiquido.ShowDialog();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Sistema_RH.NEGOCIOS;
+﻿using Sistema_RH.DADOS;
+using Sistema_RH.NEGOCIOS;
+using Sistema_RH.FORMULARIOS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +22,11 @@ namespace Sistema_RH.FORMULARIOS
         
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            
             Funcionario funcionario = new Funcionario();
             funcionario.Nome = txtNome2.Text;          
             funcionario.Sexo = txtSexo2.Text;
+            funcionario.Endereco = txtEndereço2.Text;
             funcionario.Departamento = txtDepartamento2.Text;
             funcionario.Funcao = txtFunção2.Text;
             funcionario.Estadocivil = txtEstadoCivil2.Text;
@@ -33,6 +37,11 @@ namespace Sistema_RH.FORMULARIOS
             funcionario.Email = txtEmail2.Text;
             funcionario.Rg = mskRG2.Text;
             funcionario.CarteiraTrabalho = mskCarteira2.Text;
+
+            DAOEditarRegistro editarRegistro = new DAOEditarRegistro();
+            editarRegistro.EditarDadosFuncionario(funcionario.Nome, funcionario.Sexo, funcionario.Endereco, funcionario.Departamento, 
+            funcionario.Funcao, funcionario.Estadocivil, funcionario.Admissão, funcionario.Datanascimento, funcionario.Cpf,
+            funcionario.Telefone, funcionario.Email, funcionario.Rg, funcionario.CarteiraTrabalho);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

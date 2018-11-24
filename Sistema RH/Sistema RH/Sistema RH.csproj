@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DADOS\DAOConexao.cs" />
     <Compile Include="DADOS\DAOConsultarRegistro.cs" />
+    <Compile Include="DADOS\DAOEditarRegistro.cs" />
     <Compile Include="DADOS\DAOFolhadePagamento.cs" />
     <Compile Include="DADOS\DAOFuncionario.cs" />
     <Compile Include="DADOS\DAORetornaCadastro.cs" />

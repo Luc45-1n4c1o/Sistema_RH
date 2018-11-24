@@ -76,6 +76,7 @@
             this.calcularSalarioToolStripMenuItem.Name = "calcularSalarioToolStripMenuItem";
             this.calcularSalarioToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.calcularSalarioToolStripMenuItem.Text = "Calcular Salario";
+            this.calcularSalarioToolStripMenuItem.Click += new System.EventHandler(this.calcularSalarioToolStripMenuItem_Click);
             // 
             // TelaPrincipal
             // 

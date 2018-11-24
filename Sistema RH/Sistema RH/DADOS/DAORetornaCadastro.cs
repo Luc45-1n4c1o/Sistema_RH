@@ -25,10 +25,11 @@ namespace Sistema_RH.DADOS
                     string ComandoSQL = "SELECT nome, sexo, endereco, departamento, funcao, estado_civil, email, dt_admissao, dt_nasc FROM funcionarios WHERE cpf = '" + CPF + "'";
 
 
-                    System.Windows.Forms.MessageBox.Show(ComandoSQL);
+                    MessageBox.Show(ComandoSQL);
 
                     connectaInBD.Open();
                     MySqlCommand inserttDados = new MySqlCommand(ComandoSQL, connectaInBD);
+
                     MySqlDataReader dr = inserttDados.ExecuteReader();
 
                     if (dr.HasRows)//preenchimento do form editar com os dados do banco referente ao titular do cpf.
@@ -46,6 +47,9 @@ namespace Sistema_RH.DADOS
                             edicao.mskDataAdmissão2.Text = dr.GetString(7);
                             edicao.mskDatadeNascimento2.Text = dr.GetString(8);
                             edicao.ShowDialog();
+                            //temos que tentar fechar essa conexao, 
+                            //pois está acusando conexao aberta quando clicamos no botao atualizar do form editar. 
+                            
                         }
                     }
                     else
@@ -58,7 +62,7 @@ namespace Sistema_RH.DADOS
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
-
+                
                 finally
                 {
                     connectaInBD.Close();
