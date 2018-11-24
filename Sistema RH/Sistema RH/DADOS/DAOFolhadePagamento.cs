@@ -28,7 +28,7 @@ namespace Sistema_RH.DADOS
                         " VALUES (@razao_social, @cnpj, @nome_do_funcionario, @salario_base, @departamento, @observacoes)";
 
                     /*
-                     
+                     kkkkk
                     string ComandoSQL = "INSERT INTO folhadepagamento (razao_social, cnpj, nome_do_funcionario, salario_base, departamento, observacoes)" +
                         " VALUES ('" + RazaoSocial + "','" + CNPJ + "','" + NomeFuncionario + "','" + SalarioBase + "','" + Departamento + "', '" + Observacoes + "')";
 
