@@ -33,6 +33,7 @@
             this.cadastrarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folhaDePagamentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.calcularSalarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarFuncionárioToolStripMenuItem,
             this.editarRegistroToolStripMenuItem,
-            this.folhaDePagamentoToolStripMenuItem1});
+            this.folhaDePagamentoToolStripMenuItem1,
+            this.calcularSalarioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(974, 24);
@@ -68,6 +70,12 @@
             this.folhaDePagamentoToolStripMenuItem1.Size = new System.Drawing.Size(128, 20);
             this.folhaDePagamentoToolStripMenuItem1.Text = "Folha de Pagamento";
             this.folhaDePagamentoToolStripMenuItem1.Click += new System.EventHandler(this.folhaDePagamentoToolStripMenuItem1_Click);
+            // 
+            // calcularSalarioToolStripMenuItem
+            // 
+            this.calcularSalarioToolStripMenuItem.Name = "calcularSalarioToolStripMenuItem";
+            this.calcularSalarioToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.calcularSalarioToolStripMenuItem.Text = "Calcular Salario";
             // 
             // TelaPrincipal
             // 
@@ -99,5 +107,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem folhaDePagamentoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editarRegistroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calcularSalarioToolStripMenuItem;
     }
 }

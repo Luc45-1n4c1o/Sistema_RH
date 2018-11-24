@@ -71,6 +71,12 @@
     <Compile Include="FORMULARIOS\Folha.Designer.cs">
       <DependentUpon>Folha.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\SalarioLiquido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\SalarioLiquido.Designer.cs">
+      <DependentUpon>SalarioLiquido.cs</DependentUpon>
+    </Compile>
     <Compile Include="NEGOCIOS\Autenticacao.cs" />
     <Compile Include="NEGOCIOS\FolhadePagamento.cs" />
     <Compile Include="FORMULARIOS\TelaDeApresentacao.cs">
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\Folha.resx">
       <DependentUpon>Folha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\SalarioLiquido.resx">
+      <DependentUpon>SalarioLiquido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\TelaDeApresentacao.resx">
       <DependentUpon>TelaDeApresentacao.cs</DependentUpon>
