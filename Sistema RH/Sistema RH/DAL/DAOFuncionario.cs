@@ -1,10 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using Sistema_RH.NEGOCIOS;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sistema_RH.DADOS
 {
@@ -34,8 +29,6 @@ namespace Sistema_RH.DADOS
                 string InsComand = "INSERT INTO funcionarios (nome , sexo, endereco, departamento, funcao, estado_civil, email, dt_admissao, dt_nasc, cpf, rg, carteira_trab, telefone)" +
                         " VALUES ('" + Nome + "','" + Sexo + "','" + Endereco + "','" + Depto + "','" + Funcao + "', '" + EstCivil + "', '" + Email + 
                         "', '" + Admissao.ToString("yyyy-MM-dd") + "','" + Dt_Nasc.ToString("yyyy-MM-dd") + "','" + CPF + "','" + RG + "','" + CarteiraTrab + "','" + Tel + "')";
-
-                    System.Windows.Forms.MessageBox.Show(InsComand);
 
                 connecta.Open();
                 MySqlCommand insertt = new MySqlCommand(InsComand, connecta);

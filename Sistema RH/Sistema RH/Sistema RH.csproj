@@ -48,87 +48,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DADOS\DAOConexao.cs" />
-    <Compile Include="DADOS\DAOConsultarRegistro.cs" />
-    <Compile Include="DADOS\DAOEditarRegistro.cs" />
-    <Compile Include="DADOS\DAOFolhadePagamento.cs" />
-    <Compile Include="DADOS\DAOFuncionario.cs" />
-    <Compile Include="DADOS\DAORetornaCadastro.cs" />
-    <Compile Include="FORMULARIOS\ConsultarRegistro.cs">
+    <Compile Include="DAL\DAOConexao.cs" />
+    <Compile Include="DAL\DAOConsultarRegistro.cs" />
+    <Compile Include="DAL\DAOEditarRegistro.cs" />
+    <Compile Include="DAL\DAOFolhadePagamento.cs" />
+    <Compile Include="DAL\DAOFuncionario.cs" />
+    <Compile Include="DAL\DAORetornaCadastro.cs" />
+    <Compile Include="VIEWS\ConsultarRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\ConsultarRegistro.Designer.cs">
+    <Compile Include="VIEWS\ConsultarRegistro.Designer.cs">
       <DependentUpon>ConsultarRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\Editar.cs">
+    <Compile Include="VIEWS\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\Editar.Designer.cs">
+    <Compile Include="VIEWS\Editar.Designer.cs">
       <DependentUpon>Editar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\Folha.cs">
+    <Compile Include="VIEWS\Folha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\Folha.Designer.cs">
+    <Compile Include="VIEWS\Folha.Designer.cs">
       <DependentUpon>Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\SalarioLiquido.cs">
+    <Compile Include="VIEWS\SalarioLiquido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\SalarioLiquido.Designer.cs">
+    <Compile Include="VIEWS\SalarioLiquido.Designer.cs">
       <DependentUpon>SalarioLiquido.cs</DependentUpon>
     </Compile>
-    <Compile Include="NEGOCIOS\Autenticacao.cs" />
-    <Compile Include="NEGOCIOS\FolhadePagamento.cs" />
-    <Compile Include="FORMULARIOS\TelaDeApresentacao.cs">
+    <Compile Include="MODEL\Autenticacao.cs" />
+    <Compile Include="MODEL\FolhadePagamento.cs" />
+    <Compile Include="VIEWS\TelaDeApresentacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\TelaDeApresentacao.Designer.cs">
+    <Compile Include="VIEWS\TelaDeApresentacao.Designer.cs">
       <DependentUpon>TelaDeApresentacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\Cadastro.cs">
+    <Compile Include="VIEWS\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\Cadastro.Designer.cs">
+    <Compile Include="VIEWS\Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\TelaPrincipal.cs">
+    <Compile Include="VIEWS\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\TelaPrincipal.Designer.cs">
+    <Compile Include="VIEWS\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\TelaLogin.cs">
+    <Compile Include="VIEWS\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\TelaLogin.Designer.cs">
+    <Compile Include="VIEWS\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="NEGOCIOS\Funcionario.cs" />
+    <Compile Include="MODEL\Funcionario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FORMULARIOS\ConsultarRegistro.resx">
+    <EmbeddedResource Include="VIEWS\ConsultarRegistro.resx">
       <DependentUpon>ConsultarRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\Editar.resx">
+    <EmbeddedResource Include="VIEWS\Editar.resx">
       <DependentUpon>Editar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\Folha.resx">
+    <EmbeddedResource Include="VIEWS\Folha.resx">
       <DependentUpon>Folha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\SalarioLiquido.resx">
+    <EmbeddedResource Include="VIEWS\SalarioLiquido.resx">
       <DependentUpon>SalarioLiquido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\TelaDeApresentacao.resx">
+    <EmbeddedResource Include="VIEWS\TelaDeApresentacao.resx">
       <DependentUpon>TelaDeApresentacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\Cadastro.resx">
+    <EmbeddedResource Include="VIEWS\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\TelaPrincipal.resx">
+    <EmbeddedResource Include="VIEWS\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\TelaLogin.resx">
+    <EmbeddedResource Include="VIEWS\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

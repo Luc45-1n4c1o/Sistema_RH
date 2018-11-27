@@ -1,13 +1,5 @@
 ﻿using Sistema_RH.DADOS;
-using Sistema_RH.NEGOCIOS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sistema_RH.FORMULARIOS
@@ -21,7 +13,9 @@ namespace Sistema_RH.FORMULARIOS
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            // Acrecentar os demais códigos
+            //Primeiramente verifica a existencia do cpf no banco,
+            //caso encontrado o método queryDadosCPF retorna esses dados no form Editar
+
             string cpf = mskInformeCpf.Text;
             this.Visible = false;
             DAOConsultarRegistro pesquisaNoRegistro = new DAOConsultarRegistro();
@@ -29,11 +23,9 @@ namespace Sistema_RH.FORMULARIOS
             
             if (pesquisaNoRegistro.statusDoCpf() == true)
             {
-               // Editar editar = new Editar();
+
                 DAORetornaCadastro daoteste = new DAORetornaCadastro();
                 daoteste.queryDadosCPF(cpf);
-                //editar.txtNome2.Text = "lucas"; tentativa de trazer os dados(vindo do banco) referente ao titular do cpf cujo foi realizada a consulta.
-                //editar.ShowDialog();
               
             }
             else
