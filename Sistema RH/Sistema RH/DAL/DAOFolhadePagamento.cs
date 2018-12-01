@@ -5,7 +5,7 @@ namespace Sistema_RH.DADOS
 {
     public class DAOFolhadePagamento
     {
-        public void CadastrarPayment(string rsocial, string cnpj, string nomefunc, decimal sbase, string depart, string obs)
+        public void CadastrarPayment(string rsocial, string cnpj, string nomefunc, string sbase, string depart, string obs)
         {
             using (MySqlConnection connectaInBD = DAOConexao.getConnection())
                 try
@@ -13,7 +13,7 @@ namespace Sistema_RH.DADOS
                     string RazaoSocial = rsocial;
                     string CNPJ = cnpj;
                     string NomeFuncionario = nomefunc;
-                    decimal SalarioBase = sbase;
+                    string SalarioBase = sbase;
                     string Departamento = depart;
                     string Observacoes = obs;
                     
@@ -26,7 +26,7 @@ namespace Sistema_RH.DADOS
                     inserttDados.Parameters.Add("@razao_social", MySqlDbType.VarChar, 100);
                     inserttDados.Parameters.Add("@cnpj", MySqlDbType.VarChar, 30);
                     inserttDados.Parameters.Add("@nome_do_funcionario", MySqlDbType.VarChar, 100);
-                    inserttDados.Parameters.Add("@salario_base", MySqlDbType.Decimal, 12);
+                    inserttDados.Parameters.Add("@salario_base", MySqlDbType.VarChar, 9);
                     inserttDados.Parameters.Add("@departamento", MySqlDbType.VarChar, 50);
                     inserttDados.Parameters.Add("@observacoes", MySqlDbType.VarChar, 500);
 
