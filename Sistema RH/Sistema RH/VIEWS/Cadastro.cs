@@ -12,19 +12,27 @@ namespace Sistema_RH.Formulários
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            NEGOCIOS.Funcionario._funcionario.Nome = txtNome.Text;
-            NEGOCIOS.Funcionario._funcionario.Sexo = txtSexo.Text;
-            NEGOCIOS.Funcionario._funcionario.Departamento = txtDepartamento.Text;
-            NEGOCIOS.Funcionario._funcionario.Endereco = txtEndereço.Text;
-            NEGOCIOS.Funcionario._funcionario.Funcao = txtFunção.Text;
-            NEGOCIOS.Funcionario._funcionario.Estadocivil = txtEstadoCivil.Text;
-            NEGOCIOS.Funcionario._funcionario.Admissão = Convert.ToDateTime(mskDataAdmissão.Text);
-            NEGOCIOS.Funcionario._funcionario.Datanascimento = Convert.ToDateTime(mskDatadeNascimento.Text);
-            NEGOCIOS.Funcionario._funcionario.Cpf = mskCPF.Text;
-            NEGOCIOS.Funcionario._funcionario.Telefone = mskTelefone.Text;
-            NEGOCIOS.Funcionario._funcionario.Email = txtEmail.Text;
-            NEGOCIOS.Funcionario._funcionario.Rg = mskRG.Text;
-            NEGOCIOS.Funcionario._funcionario.CarteiraTrabalho = mskCarteira.Text;
+            if ((txtNome.Text == "") || (txtSexo.Text == "") || (txtDepartamento.Text == "") || (txtEndereço.Text == "")
+                || (txtFunção.Text == "") || (txtEstadoCivil.Text == "") || (mskDataAdmissão.Text == "") ||
+                (mskDatadeNascimento.Text == "") || (mskCPF.Text == "") || (mskTelefone.Text == "") || (txtEmail.Text == "")
+                || (mskRG.Text == "") || (mskCarteira.Text == "")) MessageBox.Show("Existem campos vazios a serem preenchidos.");
+
+            else
+            {
+                NEGOCIOS.Funcionario._funcionario.Nome = txtNome.Text;
+                NEGOCIOS.Funcionario._funcionario.Sexo = txtSexo.Text;
+                NEGOCIOS.Funcionario._funcionario.Departamento = txtDepartamento.Text;
+                NEGOCIOS.Funcionario._funcionario.Endereco = txtEndereço.Text;
+                NEGOCIOS.Funcionario._funcionario.Funcao = txtFunção.Text;
+                NEGOCIOS.Funcionario._funcionario.Estadocivil = txtEstadoCivil.Text;
+                NEGOCIOS.Funcionario._funcionario.Admissão = Convert.ToDateTime(mskDataAdmissão.Text);
+                NEGOCIOS.Funcionario._funcionario.Datanascimento = Convert.ToDateTime(mskDatadeNascimento.Text);
+                NEGOCIOS.Funcionario._funcionario.Cpf = mskCPF.Text;
+                NEGOCIOS.Funcionario._funcionario.Telefone = mskTelefone.Text;
+                NEGOCIOS.Funcionario._funcionario.Email = txtEmail.Text;
+                NEGOCIOS.Funcionario._funcionario.Rg = mskRG.Text;
+                NEGOCIOS.Funcionario._funcionario.CarteiraTrabalho = mskCarteira.Text;
+            }
 
             DADOS.DAOFuncionario.InsertBD();
         }
